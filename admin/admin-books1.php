@@ -1,4 +1,3 @@
-
 <?php
 
 // Include connection file 
@@ -21,7 +20,7 @@ echo "sorry";
 
 if (mysqli_query($conn, $sql)) {
   // Redirect to login page
-  header('Location: login.html');
+  header('Location: admin-books.php');
   exit;
 } else {
   echo "Error inserting user: " . mysqli_error($conn);

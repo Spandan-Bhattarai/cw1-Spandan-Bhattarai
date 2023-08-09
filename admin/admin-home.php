@@ -26,26 +26,28 @@
 
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark">
-      <a class="navbar-brand" href="admin-dashbaord.html">Admin Panel</a>
+      <a class="navbar-brand" href="admin-dashboard.php">Admin Panel</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-              <a class="nav-link" href="admin-home.html">Users </a>
+              <a class="nav-link" href="admin-home.php">Users </a>
           </li>
           <li class="nav-item active">
-              <a class="nav-link" href="admin-home.html">Requests</a>
+              <a class="nav-link" href="admin-home.php">Requests</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="admin-books.html">Books</a>
+            <a class="nav-link" href="admin-books.php">Books</a>
           </li>
           <li class="nav-item">
-              <a class="nav-link" href="admin-about-us.html">About-us </a>
+              <a class="nav-link" href="admin-about-us.php">About-us </a>
           </li>
         </ul>
-        <button class="btn btn-outline-danger my-2 my-sm-0" type="submit">Logout</button>
+        <div class="d-flex justify-content-end">
+        <a href="/project/clear_cookie.php" class="btn btn-danger">Logout</a>
+      </div>
       </div>
     </nav>
 
@@ -116,7 +118,7 @@
 
     <script>
       $(document).ready(function () {
-        $.getJSON("admin-home.php", function (data) {
+        $.getJSON("admin-home1.php", function (data) {
           let users = data.users;
           let requests = data.requests;
 

@@ -17,11 +17,11 @@ if (password_verify($password, $user['password'])) {
   if ($user['is_admin'] == 1) {
     // Set admin cookie
     setcookie('user_type', 'admin', time() + 3600);
-    header('Location: admin-dashbaord.php');
+    header('Location: /project/admin/admin-dashboard.php');
   } else {  
     // Set regular user cookie 
     setcookie('user_type', 'user', time() + 3600);
-    header('Location: home.php'); 
+    header('Location: /project/user/home.php'); 
   }
   
   exit();

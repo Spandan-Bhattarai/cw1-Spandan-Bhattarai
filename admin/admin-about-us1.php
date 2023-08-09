@@ -16,7 +16,7 @@ echo "sorry";
 
 if (mysqli_query($conn, $sql)) {
   // Redirect to login page
-  header('Location: admin-about-us.html');
+  header('Location: admin-about-us.php');
   exit;
 } else {
   echo "Error inserting user: " . mysqli_error($conn);

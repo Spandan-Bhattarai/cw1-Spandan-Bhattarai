@@ -38,7 +38,7 @@ include 'admin-auth.php';
 
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark">
-      <a class="navbar-brand" href="admin-dashbaord.html">Admin Panel</a>
+      <a class="navbar-brand" href="admin-dashboard.php">Admin Panel</a>
       <button
         class="navbar-toggler"
         type="button"
@@ -53,21 +53,22 @@ include 'admin-auth.php';
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <a class="nav-link" href="admin-home.html">Users </a>
+            <a class="nav-link" href="admin-home.php">Users </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="admin-home.html">Requests </a>
+            <a class="nav-link" href="admin-home.php">Requests </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="admin-books.html"
-              >Books<span class="sr-only">(current)</span></a
+            <a class="nav-link" href="admin-books.php">Books</a
             >
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="admin-about-us.html">About us </a>
+            <a class="nav-link" href="admin-about-us.php">About us </a>
           </li>
         </ul>
-        <button class="btn btn-outline-danger my-2 my-sm-0" type="submit"><a href="index.html">Logout</a>
+        <div class="d-flex justify-content-end">
+        <a href="/project/clear_cookie.php" class="btn btn-danger">Logout</a>
+      </div>
           
         </button>
       </div>
@@ -125,7 +126,7 @@ include 'admin-auth.php';
     <script>
       $(document).ready(function () {
         // Fetch summary data
-        $.getJSON("admin-dashboard.php", function (data) {
+        $.getJSON("admin-dashboard1.php", function (data) {
           $("#total-books").text(data.books);
           $("#total-users").text(data.users);
           $("#total-requests").text(data.requests);
