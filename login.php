@@ -15,9 +15,13 @@ if (password_verify($password, $user['password'])) {
 
   // Check if admin
   if ($user['is_admin'] == 1) {
-    header('Location: admin-home.html');
+    // Set admin cookie
+    setcookie('user_type', 'admin', time() + 3600);
+    header('Location: admin-dashbaord.php');
   } else {  
-    header('Location: home.html'); 
+    // Set regular user cookie 
+    setcookie('user_type', 'user', time() + 3600);
+    header('Location: home.php'); 
   }
   
   exit();
