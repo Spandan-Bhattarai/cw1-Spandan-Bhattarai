@@ -14,6 +14,6 @@ $sql = "INSERT INTO requested_books (book_name, isbn, author, release_date)
         
 $conn->query($sql);
               
-header('Location: home.html');
+header('Location: requestbook.php');
 
 ?>
