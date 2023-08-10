@@ -62,7 +62,7 @@ $result = mysqli_query($conn, $sql);
         </li>
       </ul>
       <div class="d-flex justify-content-end">
-        <a href="/project/clear_cookie.php" class="btn btn-danger">Logout</a>
+        <a href="/cw1-Spandan-Bhattarai/clear_cookie.php" class="btn btn-danger">Logout</a>
       </div>
     </div>
   </nav>

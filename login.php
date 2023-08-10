@@ -17,11 +17,11 @@ if (password_verify($password, $user['password'])) {
   if ($user['is_admin'] == 1) {
     // Set admin cookie
     setcookie('user_type', 'admin', time() + 3600);
-    header('Location: /project/admin/admin-dashboard.php');
+    header('Location: /cw1-Spandan-Bhattarai/admin/admin-dashboard.php');
   } else {  
     // Set regular user cookie 
     setcookie('user_type', 'user', time() + 3600);
-    header('Location: /project/user/home.php'); 
+    header('Location: /cw1-Spandan-Bhattarai/user/home.php'); 
   }
   
   exit();

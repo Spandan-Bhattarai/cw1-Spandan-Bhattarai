@@ -1,12 +1,10 @@
 <?php
-
 include 'connect.php';
 include 'user-auth.php';
-
-$sql = "SELECT cover_image_link, book_link, title, author, description FROM books";
-
+// Query to get about us data
+$sql = "SELECT image1, image2, description FROM about_us";
 $result = mysqli_query($conn, $sql);
-
+$about = mysqli_fetch_assoc($result);
 ?>
 
 <!DOCTYPE html>
@@ -14,30 +12,6 @@ $result = mysqli_query($conn, $sql);
 
 <head>
   <title>Home</title>
-  <style>
-    .book {
-      display: flex;
-      align-items: center;
-      margin-bottom: 20px;
-      padding: 10px;
-    }
-
-    .book-image {
-      flex: 1;
-      margin-right: 20px;
-    }
-
-    .book-info {
-      flex: 3;
-    }
-
-    .book {
-      display: flex;
-      align-items: center;
-      margin-bottom: 20px;
-      border: 1px solid #ddd;
-    }
-  </style>
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 </head>
@@ -62,14 +36,44 @@ $result = mysqli_query($conn, $sql);
         </li>
       </ul>
       <div class="d-flex justify-content-end">
-        <a href="/project/clear_cookie.php" class="btn btn-danger">Logout</a>
+        <a href="/cw1-Spandan-Bhattarai/clear_cookie.php" class="btn btn-danger">Logout</a>
       </div>
     </div>
   </nav>
-  <!-- About us section -->
+  <!-- About Section -->
   <div class="container my-5">
 
+    <div class="row align-items-center">
+
+      <div class="col-md-6 order-2 order-md-1">
+
+        <h2>About Us</h2>
+
+        <p class="lead text-justify">
+          <span class="font-italic">
+            <?php echo $about['description']; ?>
+          </span>
+
+        <blockquote class="blockquote text-right">
+          <p>: By Admin</p>
+        </blockquote>
+        </p>
+
+      </div>
+      <div class="col-md-6 order-1 order-md-2 text-center">
+
+        <img src="<?php echo $about['image1']; ?>" class="img-fluid">
+
+      </div>
+
+    </div>
+
+
   </div>
+
+
+
+  <!-- footer section -->
   <footer class="bg-dark text-light mt-5">
     <div class="container py-3">
       <div class="row">
