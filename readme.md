@@ -123,7 +123,7 @@ Don't forget to give the project a star! Thanks again!
 <!-- Version -->
 ## Version
 
-After some beta release followed by minor changes, the project is currently in the Version 1.0
+After beta release followed by minor changes, the project is currently in the Version 1.1
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
